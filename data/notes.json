@@ -1,12 +1,14 @@
 {
     "notes": [
         {
-            "title": "Erica",
-            "text":"Thanks for the test!"
+            "id": "1",
+            "title": "Remember to do something",
+            "text":"But good luck trying to remember, WITHOUT NOTES!"
         },
         {
-            "title": "Test Title 2",
-            "text":"test text 2"
+            "id": "2",
+            "title": "Hello World",
+            "text":"Hi hi hi!"
         }
     ]
 }
