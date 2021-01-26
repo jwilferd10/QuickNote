@@ -43,6 +43,10 @@
   - To create a note click the pencil button and enter details
   - To save the note click the save icon
   - To view old notes click ontop of the old note names
+    ### OR
+  To run it on the back-end type 'node server'
+  - 'node server' activates this on local port 3001
+  - Navigate to "http://localhost:3001/notes" to test it out there.
   
   ## Contact Information:
   - Github: [jwilferd10](https://github.com/jwilferd10)
