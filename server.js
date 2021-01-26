@@ -1,7 +1,6 @@
 const fs = require('fs');
 const { notes } = require('./data/notes');
 const express = require('express');
-
 const PORT = process.env.PORT || 3001;
 const app = express ();
 
@@ -80,12 +79,12 @@ app.post('/api/notes', (req, res) => {
     if (!validateNote(req.body)) {
         res.status(400).send('The note is not properly formatted.');
     } else {
-        // Add notes to json file and notes array in THIS function (KEEP TABS ON THIS)
+        // Add notes to json file and notes array
         const note = createNewNotes(req.body, notes);
         //req.body is where our incoming content will be
         res.json(note);
     }
-    // Add notes to json file and notes array in THIS function (KEEP TABS ON THIS)
+    // Add notes to json file and notes array 
     // const note = createNewNotes(req.body, notes)
 
     //req.body is where our incoming content will be
@@ -96,25 +95,6 @@ app.post('/api/notes', (req, res) => {
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 })
-
-// fetch('/api/notes', {
-//     method: 'POST',
-//     headers: {
-//         Accept: 'application/json',
-//         'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify(noteObject)
-// })
-// .then (response => {
-//     if (response.ok) {
-//         return response.json();
-//     }
-//     alert('Error: ' + response.statusText)
-// })
-// .then(postResponse => {
-//     console.log(postResponse);
-//     alert('Thanks for adding your note!');
-// });
 
 // Reminder: app.listen should always be last. 
 app.listen(PORT, () => {
