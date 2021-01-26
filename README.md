@@ -2,11 +2,15 @@
 
   Live Deployment Link: https://fantastical-note-taker.herokuapp.com/
   
+  ## Screenshots of Deployed Application:
+  ![image](Note-Taker-Screenshot.png)
+  ![image](Note-Taker-Screenshot-2.png)
+  
   ## Table of Contents 
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Additional Info](#additional-info)
+  - [Contact Information](#contact-information)
 
   ## Description:
   Ever wondering how to make a quick and easy note on the web? Look no further, that's provided here with the fantastical note taker! Created in effort to have a place to digitally store notes. Like all challenges this one pushed me and it took awhile to figure out if I've got everything working. To see it work as is, is a wonderful feeling and a reminder to myself that with enough time to trial and error you can get a neat reward at the end of it. So please, enjoy the note-taker!
