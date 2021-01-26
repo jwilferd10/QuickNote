@@ -6,8 +6,6 @@
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Contribution](#contribution)
-  - [Testing](#testing)
   - [Additional Info](#additional-info)
 
   ## Description:
@@ -33,11 +31,16 @@
    - THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
   ## Installation:
-  Install it through Github
+  Install it through Github!
 
   ## Usage:
-  Navigate to the live deployment of the app, click on
-  ## Additional Info:
+  Click this link: https://fantastical-note-taker.herokuapp.com/
+  - This will take you to the live deployment
+  - To create a note click the pencil button and enter details
+  - To save the note click the save icon
+  - To view old notes click ontop of the old note names
+  
+  ## Contact Information:
   - Github: [jwilferd10](https://github.com/jwilferd10)
   - Email: jwilferd10@yahoo.com 
   
