@@ -1,6 +1,8 @@
 # Fantastical Note Taker
+This project is currently undergoing a facelift and will be updated frequently in the coming time. This is a work in progress!
 
-  Live Deployment Link: https://fantastical-note-taker.herokuapp.com/
+
+  Live Deployment Link: COMING SOON
   
   ## Screenshots of Deployed Application:
   ![image](Note-Taker-Screenshot.png)
@@ -51,4 +53,3 @@
   ## Contact Information:
   - Github: [jwilferd10](https://github.com/jwilferd10)
   - Email: jwilferd10@yahoo.com 
-  
