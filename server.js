@@ -98,5 +98,5 @@ app.get('/', (req, res) => {
 
 // Reminder: app.listen should always be last. 
 app.listen(PORT, () => {
-    console.log(`API server now on port ${PORT}!`);
+    console.log(`API server now on port http://localhost:${PORT}!`);
 });
