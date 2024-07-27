@@ -2,16 +2,14 @@ const fs = require('fs');
 const { notes } = require('./data/notes');
 const express = require('express');
 const PORT = process.env.PORT || 3001;
-const app = express ();
-
+const app = express();
 const path = require('path')
 
 
 // Middleware that instructs the server to make certain files readily available and to not gate it behind a server endpoint.
-// Provide a file path to a location in our application and instruct the server to make these files static resources.
-app.use(express.urlencoded({ extended: true })); // parse incoming string or array data
-app.use(express.json()); // parse incoming JSON data
-app.use(express.static('public')); //Should allow us to get CSS styles up.
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static('public'));
 
 function filterByQuery(query, notesArray) {
     let filteredResults = notesArray;
@@ -84,11 +82,6 @@ app.post('/api/notes', (req, res) => {
         //req.body is where our incoming content will be
         res.json(note);
     }
-    // Add notes to json file and notes array 
-    // const note = createNewNotes(req.body, notes)
-
-    //req.body is where our incoming content will be
-    // res.json(req.body);
 });
 
 // '/' brings us to the root route of the server! This is the route used to create a homepage for a server.
