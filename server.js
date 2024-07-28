@@ -6,9 +6,12 @@ const app = express();
 const path = require('path')
 
 
-// Middleware that instructs the server to make certain files readily available and to not gate it behind a server endpoint.
+// Middleware to parse incoming string or array data 
 app.use(express.urlencoded({ extended: true }));
+
+// Middleware to parse incoming JSON data
 app.use(express.json());
+
 app.use(express.static('public'));
 
 function filterByQuery(query, notesArray) {
