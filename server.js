@@ -1,8 +1,11 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import notes from './data/notes.json' assert { type: 'json' };
+import express from 'express';
 
-const { notes } = require('./data/notes');
-const express = require('express');
+// const { notes } = require('./data/notes');
+
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 
