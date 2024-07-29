@@ -3,6 +3,8 @@ import path from 'path';
 import notes from './data/notes.json' assert { type: 'json' };
 import express from 'express';
 
+import { filterByQuery, findByID, createNewNotes, validateNote } from './lib/notes';
+
 // const { notes } = require('./data/notes');
 
 
