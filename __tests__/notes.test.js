@@ -1,4 +1,27 @@
+import { jest } from '@jest/globals';
+
+jest.mock('fs');
+
 import { filterByQuery, findByID, createNewNotes, validateNote } from '../lib/notes.js';
+import data from '../data/notes.json';
+
+// createNewNotes should add to the notes.json file
+const notes = data.notes
+test('Create a new note object', () => {
+
+    const note = createNewNotes (
+        {
+            id: "3",
+            title: "JEST TEST NOTE TITLE",
+            text: "TESTING THE 'createNewNotes' FUNCTIONALITY"
+        },
+        notes
+    );
+
+    expect(note.id).toBe("3");
+    expect(note.title).toBe("JEST TEST NOTE TITLE");
+    expect(note.text).toBe("TESTING THE 'createNewNotes' FUNCTIONALITY");
+});
 
 // Use findByID to locate specific entries saved into the array
 test('Locate note by ID', () => {
