@@ -35,15 +35,16 @@ app.get('/api/notes/:id', (req, res) => {
 });
 
 app.post('/api/notes', (req, res) => {
-    // This method will only work as long as we don't remove any data from notes.json. If we do, the id numbers will be thrown off and we'll end up with a duplicate value at some point.
-    // set id based on what the next index of the array will be
-    req.body.id = notes.length.toString();
+    // Access the notes array from the imported notes object 
+    const notesArray = notes.notes
+
+    req.body.id = notesArray.length.toString();
 
     if (!validateNote(req.body)) {
         res.status(400).send('The note is not properly formatted.');
     } else {
-        // Add notes to json file and notes array
-        const note = createNewNotes(req.body, notes);
+        // Add note to the array and JSON file
+        const note = createNewNotes(req.body, notesArray);
         //req.body is where our incoming content will be
         res.json(note);
     }
