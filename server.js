@@ -1,12 +1,9 @@
-import fs from 'fs';
 import path from 'path';
 import notes from './data/notes.json' assert { type: 'json' };
 import express from 'express';
 
+import { __filename, __dirname } from './utils/pathHelpers.js';
 import { filterByQuery, findByID, createNewNotes, validateNote } from './lib/notes.js';
-
-// const { notes } = require('./data/notes');
-
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -29,7 +26,7 @@ app.get('/api/notes', (req, res) => {
 
 // REMEMBER: This route should take us to /notes
 app.get('/notes', (req,res) => {
-    res.sendFile(path.join(__dirname, './public/notes.html'))
+    res.sendFile(path.join(__dirname, './public/notes.html'));
 })
 
 app.get('/api/notes/:id', (req, res) => {
