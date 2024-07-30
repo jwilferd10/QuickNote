@@ -57,7 +57,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 })
 
-// Reminder: app.listen should always be last. 
+// Highlight which port project is being hosted on
 app.listen(PORT, () => {
-    console.log(`API server now on port http://localhost:${PORT}!`);
+    // Collect current date and time, will be useful for debugging and monitoring 
+    const currentDateandTime = new Date().toLocaleString();
+    
+    console.log('✔️ ' + ` ${currentDateandTime} | API server running at http://localhost:${PORT}`);
 });
