@@ -2,7 +2,7 @@ import { jest } from '@jest/globals';
 
 jest.mock('fs');
 
-import { filterByQuery, findByID, createNewNotes, validateNote } from '../lib/notes.js';
+import { findByID, createNewNotes, validateNote } from '../lib/notes.js';
 import data from '../data/notes.json';
 
 // createNewNotes should add to the notes.json file
