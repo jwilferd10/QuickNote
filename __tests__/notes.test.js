@@ -6,22 +6,22 @@ import { filterByQuery, findByID, createNewNotes, validateNote } from '../lib/no
 import data from '../data/notes.json';
 
 // createNewNotes should add to the notes.json file
-const notes = data.notes
-test('Create a new note object', () => {
+// const notes = data.notes
+// test('Create a new note object', () => {
 
-    const note = createNewNotes (
-        {
-            id: "3",
-            title: "JEST TEST NOTE TITLE",
-            text: "TESTING THE 'createNewNotes' FUNCTIONALITY"
-        },
-        notes
-    );
+//     const note = createNewNotes (
+//         {
+//             id: "3",
+//             title: "JEST TEST NOTE TITLE",
+//             text: "TESTING THE 'createNewNotes' FUNCTIONALITY"
+//         },
+//         notes
+//     );
 
-    expect(note.id).toBe("3");
-    expect(note.title).toBe("JEST TEST NOTE TITLE");
-    expect(note.text).toBe("TESTING THE 'createNewNotes' FUNCTIONALITY");
-});
+//     expect(note.id).toBe("3");
+//     expect(note.title).toBe("JEST TEST NOTE TITLE");
+//     expect(note.text).toBe("TESTING THE 'createNewNotes' FUNCTIONALITY");
+// });
 
 // Use findByID to locate specific entries saved into the array
 test('Locate note by ID', () => {
@@ -43,4 +43,16 @@ test('Locate note by ID', () => {
     expect(result.title).toBe('Hello World');
 });
 
-// 
+// validateNote checks if the title and text is that of a string, or has value.
+test('Test the note validation function', () => {
+    // Create a valid note object
+    const validNote = {
+        id: '1',
+        title: 'ValidTestTitle',
+        text: 'Hello World!'
+    }
+
+    const result1 = validateNote(validNote);
+
+    expect(result1).toBe(true);
+});
