@@ -3,7 +3,7 @@ import notes from './data/notes.json' assert { type: 'json' };
 import express from 'express';
 
 import { __filename, __dirname } from './utils/pathHelpers.js';
-import { filterByQuery, findByID, createNewNotes, validateNote } from './lib/notes.js';
+import { findByID, createNewNotes, validateNote } from './lib/notes.js';
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -18,9 +18,9 @@ app.use(express.static('public'));
 
 app.get('/api/notes', (req, res) => {
     let results = notes;
-    if (req.query) {
-        results = filterByQuery(req.query, results);
-    }
+    // if (req.query) {
+    //     results = filterByQuery(req.query, results);
+    // }
     res.json(results);
 });
 
