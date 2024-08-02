@@ -3,7 +3,7 @@ import notes from './data/notes.json' assert { type: 'json' };
 import express from 'express';
 
 import { __filename, __dirname } from './utils/pathHelpers.js';
-import { findByID, createNewNotes, validateNote } from './lib/notes.js';
+import { findByID, createNewNotes, validateNote, deleteNote } from './lib/notes.js';
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -28,6 +28,18 @@ app.get('/notes', (req,res) => {
 
 app.get('/api/notes/:id', (req, res) => {
     const result = findByID(req.params.id, notes);
+    res.json(result);
+});
+
+// Find the location of the id being deleted
+app.delete('/api/notes/:id', (req, res) => {
+    // Access the nested array and tie it to notesArray
+    const notesArray = notes.notes
+
+    // Run the parameters through deleteNote method
+    const result = deleteNote(req.params.id, notesArray);
+
+    // return the results
     res.json(result);
 });
 
