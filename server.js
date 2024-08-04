@@ -1,6 +1,7 @@
 import path from 'path';
 import notes from './data/notes.json' assert { type: 'json' };
 import express from 'express';
+import { v4 as uuidv4 } from 'uuid';
 
 import { __filename, __dirname } from './utils/pathHelpers.js';
 import { findByID, createNewNotes, validateNote, deleteNote } from './lib/notes.js';
@@ -47,7 +48,8 @@ app.post('/api/notes', (req, res) => {
     // Access the notes array from the imported notes object 
     const notesArray = notes.notes
 
-    req.body.id = notesArray.length.toString();
+    // Set the id to a random uuid
+    req.body.id = uuidv4();
 
     if (!validateNote(req.body)) {
         res.status(400).send('The note is not properly formatted.');
