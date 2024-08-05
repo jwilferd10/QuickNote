@@ -1,10 +1,10 @@
 import path from 'path';
-import notes from './data/notes.json' assert { type: 'json' };
-import express from 'express';
-import { v4 as uuidv4 } from 'uuid';
+// import notes from './data/notes.json' assert { type: 'json' };
+// import express from 'express';
+// import { v4 as uuidv4 } from 'uuid';
 
 import { __filename, __dirname } from './utils/pathHelpers.js';
-import { findByID, createNewNotes, validateNote, deleteNote } from './lib/notes.js';
+// import { findByID, createNewNotes, validateNote, deleteNote } from './lib/notes.js';
 
 const PORT = process.env.PORT || 3001;
 const app = express();
