@@ -1,4 +1,5 @@
 import path from 'path';
+import apiRoutes from './routes/apiRoutes/index.js';
 // import notes from './data/notes.json' assert { type: 'json' };
 // import express from 'express';
 // import { v4 as uuidv4 } from 'uuid';
@@ -14,6 +15,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // Middleware to parse incoming JSON data
 app.use(express.json());
+
+// Route handlers (Sets the address)
+app.use('/api', apiRoutes);
 
 app.use(express.static('public'));
 
