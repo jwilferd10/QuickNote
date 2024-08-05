@@ -1,23 +1,23 @@
 import express from 'express';
 import { v4 as uuidv4 } from 'uuid';
-import notes from './data/notes.json' assert { type: 'json' };
-import { findByID, createNewNotes, validateNote, deleteNote } from './lib/notes.js';
+import notes from '../../data/notes.json' assert { type: 'json' };
+import { findByID, createNewNotes, validateNote, deleteNote } from '../../lib/notes.js';
 
 // Create the router instance
 const router = express.Router();
 
-router.get('/api/notes', (req, res) => {
+router.get('/notes', (req, res) => {
     let results = notes;
     res.json(results);
 });
 
-router.get('/api/notes/:id', (req, res) => {
+router.get('/notes/:id', (req, res) => {
     const result = findByID(req.params.id, notes);
     res.json(result);
 });
 
 // Find the location of the id being deleted
-router.delete('/api/notes/:id', (req, res) => {
+router.delete('/notes/:id', (req, res) => {
     // Access the nested array and tie it to notesArray
     const notesArray = notes.notes
 
@@ -28,7 +28,7 @@ router.delete('/api/notes/:id', (req, res) => {
     res.json(result);
 });
 
-router.post('/api/notes', (req, res) => {
+router.post('/notes', (req, res) => {
     // Access the notes array from the imported notes object 
     const notesArray = notes.notes
 
