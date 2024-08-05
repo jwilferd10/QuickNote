@@ -1,11 +1,7 @@
 import path from 'path';
 import apiRoutes from './routes/apiRoutes/index.js';
-// import notes from './data/notes.json' assert { type: 'json' };
-// import express from 'express';
-// import { v4 as uuidv4 } from 'uuid';
-
+import express from 'express';
 import { __filename, __dirname } from './utils/pathHelpers.js';
-// import { findByID, createNewNotes, validateNote, deleteNote } from './lib/notes.js';
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -25,45 +21,6 @@ app.use(express.static('public'));
 app.get('/notes', (req,res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
 })
-
-// app.get('/api/notes', (req, res) => {
-//     let results = notes;
-//     res.json(results);
-// });
-
-// app.get('/api/notes/:id', (req, res) => {
-//     const result = findByID(req.params.id, notes);
-//     res.json(result);
-// });
-
-// // Find the location of the id being deleted
-// app.delete('/api/notes/:id', (req, res) => {
-//     // Access the nested array and tie it to notesArray
-//     const notesArray = notes.notes
-
-//     // Run the parameters through deleteNote method
-//     const result = deleteNote(req.params.id, notesArray);
-
-//     // return the results
-//     res.json(result);
-// });
-
-// app.post('/api/notes', (req, res) => {
-//     // Access the notes array from the imported notes object 
-//     const notesArray = notes.notes
-
-//     // Set the id to a random uuid
-//     req.body.id = uuidv4();
-
-//     if (!validateNote(req.body)) {
-//         res.status(400).send('The note is not properly formatted.');
-//     } else {
-//         // Add note to the array and JSON file
-//         const note = createNewNotes(req.body, notesArray);
-//         //req.body is where our incoming content will be
-//         res.json(note);
-//     }
-// });
 
 // '/' brings us to the root route of the server! This is the route used to create a homepage for a server.
 app.get('/', (req, res) => {
