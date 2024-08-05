@@ -44,3 +44,5 @@ router.post('/api/notes', (req, res) => {
         res.json(note);
     }
 });
+
+export default router;
