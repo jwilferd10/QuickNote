@@ -1,5 +1,6 @@
 import path from 'path';
 import apiRoutes from './routes/apiRoutes/index.js';
+import htmlRoutes from './routes/htmlRoutes/index.js';
 import express from 'express';
 import { __filename, __dirname } from './utils/pathHelpers.js';
 
@@ -14,7 +15,9 @@ app.use(express.json());
 
 // Route handlers (Sets the address)
 app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
+// Serve static files
 app.use(express.static('public'));
 
 // REMEMBER: This route should take us to /notes
