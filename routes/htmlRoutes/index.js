@@ -1,6 +1,6 @@
 import path from 'path';
 import express from 'express';
-import { __filename, __dirname } from './utils/pathHelpers.js';
+import { __filename, __dirname } from '../../utils/pathHelpers.js';
 
 // Create router instance
 const router = express.Router();
