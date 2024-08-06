@@ -18,14 +18,14 @@ app.use('/api', apiRoutes);
 app.use(express.static('public'));
 
 // REMEMBER: This route should take us to /notes
-app.get('/notes', (req,res) => {
-    res.sendFile(path.join(__dirname, './public/notes.html'));
-})
+// app.get('/notes', (req,res) => {
+//     res.sendFile(path.join(__dirname, './public/notes.html'));
+// })
 
-// '/' brings us to the root route of the server! This is the route used to create a homepage for a server.
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
-})
+// // '/' brings us to the root route of the server! This is the route used to create a homepage for a server.
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, './public/index.html'));
+// })
 
 // Highlight which port project is being hosted on
 app.listen(PORT, () => {
