@@ -1,8 +1,6 @@
-import path from 'path';
 import apiRoutes from './routes/apiRoutes/index.js';
 import htmlRoutes from './routes/htmlRoutes/index.js';
 import express from 'express';
-import { __filename, __dirname } from './utils/pathHelpers.js';
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -19,16 +17,6 @@ app.use('/', htmlRoutes);
 
 // Serve static files
 app.use(express.static('public'));
-
-// REMEMBER: This route should take us to /notes
-// app.get('/notes', (req,res) => {
-//     res.sendFile(path.join(__dirname, './public/notes.html'));
-// })
-
-// // '/' brings us to the root route of the server! This is the route used to create a homepage for a server.
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, './public/index.html'));
-// })
 
 // Highlight which port project is being hosted on
 app.listen(PORT, () => {
