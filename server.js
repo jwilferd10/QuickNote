@@ -1,6 +1,7 @@
+import express from 'express';
 import apiRoutes from './routes/apiRoutes/index.js';
 import htmlRoutes from './routes/htmlRoutes/index.js';
-import express from 'express';
+import { getCurrentDateandTime } from './utils/utils.js';
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -19,9 +20,6 @@ app.use('/', htmlRoutes);
 app.use(express.static('public'));
 
 // Highlight which port project is being hosted on
-app.listen(PORT, () => {
-    // Collect current date and time, will be useful for debugging and monitoring 
-    const currentDateandTime = new Date().toLocaleString();
-    
-    console.log('✔️ ' + ` ${currentDateandTime} | API server running at http://localhost:${PORT}`);
+app.listen(PORT, () => {   
+    console.log('✔️ ' + ` ${getCurrentDateandTime()} | API server running at http://localhost:${PORT}`);
 });
