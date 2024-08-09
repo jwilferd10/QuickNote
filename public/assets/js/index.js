@@ -135,6 +135,11 @@ const renderNoteList = async (notes) => {
 
     const spanEl = document.createElement('span');
     spanEl.innerText = text;
+
+    // Adding semantic meaning to spanEl
+    spanEl.setAttribute('role', 'text');
+    spanEl.setAttribute('aria-label', 'Note Title');
+
     spanEl.addEventListener('click', handleNoteView);
 
     liEl.append(spanEl);
