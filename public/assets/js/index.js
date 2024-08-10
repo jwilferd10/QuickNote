@@ -122,13 +122,15 @@ const renderNoteList = async (notes) => {
   // Access the array from the object
   let jsonNotes = jsonResponse.notes || [];
 
+  // If on notes page, clear existing note list 
   if (window.location.pathname === '/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));
   }
 
   let noteListItems = [];
 
-  // Returns HTML element with or without a delete button
+  // Function to create a list element for each note
+  // text: the NOTE TITLE to display
   const createLi = (text, delBtn = true) => {
     const liEl = document.createElement('li');
     liEl.classList.add('list-group-item');
@@ -144,6 +146,7 @@ const renderNoteList = async (notes) => {
 
     liEl.append(spanEl);
 
+    // create and append a delete button if true
     if (delBtn) {
       const delBtnEl = document.createElement('i');
       delBtnEl.classList.add(
@@ -155,23 +158,29 @@ const renderNoteList = async (notes) => {
       );
       delBtnEl.addEventListener('click', handleNoteDelete);
 
+      // append to the list item element
       liEl.append(delBtnEl);
     }
 
+    // return the fully constructed list element
     return liEl;
   };
 
+  // If no notes, create a list item indicating there are no saved notes.
   if (jsonNotes.length === 0) {
     noteListItems.push(createLi('No saved Notes', false));
   }
 
+  // For each note, create a list item and add it to the noteListItems array
   jsonNotes.forEach((note) => {
     const li = createLi(note.title);
+    // store the note data in a data attribute
     li.dataset.note = JSON.stringify(note);
 
     noteListItems.push(li);
   });
 
+  // Append each note list item to the DOM when on the notes page
   if (window.location.pathname === '/notes') {
     noteListItems.forEach((note) => noteList[0].append(note));
   }
