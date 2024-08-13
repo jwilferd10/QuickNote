@@ -74,10 +74,15 @@ html, body {
   cursor: pointer;
 }
 
+article section div {
+  box-shadow: 0.15rem 0.15rem 0.15rem #9a9a9a;
+}
+
 .container-fluid {
   padding: 2rem 2rem 0rem 2rem;
 }
 
 form {
   border: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 0.15rem 0.15rem 0.15rem #9a9a9a;
 }
