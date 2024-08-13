@@ -1,7 +1,32 @@
+:root {
+  /* Soft Off-White: Used for primary background */
+  --primary-bg: #f1faee;
+
+  /* Medium Blue: Used for headers, navigation bars, and accents */
+  --header-nav: #457b9d;
+
+  /* Vivid Red: Used for primary action buttons, alerts, and highlights */
+  --primary-action: #e63946;
+
+  /* Light Blue: Used for secondary buttons, card backgrounds, and modals */
+  --secondary-bg: #a8dadc;
+
+  /* Dark Blue: Used for text, footer backgrounds, and strong accent elements */
+  --text-accent: #1d3557;
+
+  /* Slightly lighter blue for list items */
+  --list-item-bg: #6795b2;
+}
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: var(--primary-bg);
+}
+
+nav {
+  background-color: var(--header-nav);
 }
 
 #jumboStyle {
@@ -68,6 +93,8 @@ html, body {
 
 .list-container .list-group-item {
   border-radius: 0.75rem !important;
+  background-color: var(--list-item-bg);
+  color: white;
   box-shadow: 0.1rem 0.1rem 0.2rem #9a9a9a;
   padding: 1rem;
   margin: 0.25rem;
@@ -83,6 +110,10 @@ article section div {
 }
 
 form {
-  border: 1px solid rgba(0, 0, 0, 0.125);
   box-shadow: 0.15rem 0.15rem 0.15rem #9a9a9a;
+}
+
+form *,
+.card {
+  background-color: var(--secondary-bg);
 }
