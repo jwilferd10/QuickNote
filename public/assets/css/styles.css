@@ -69,7 +69,8 @@ nav {
   color: #757575;
 }
 
-.list-container .card {
+.list-container .card,
+#note-form .card {
   height: calc(100vh - 10rem);
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
