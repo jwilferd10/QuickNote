@@ -37,6 +37,10 @@ html, body {
   color: var(--header-nav);
 }
 
+.icons .fas:hover {
+  color: var(--text-accent);
+}
+
 #jumboStyle {
   box-shadow: 0px 3px 4px black;
   background-color: var(--secondary-bg);
