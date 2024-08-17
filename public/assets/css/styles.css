@@ -23,28 +23,28 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: var(--primary-bg);
-}
 
-#header-nav {
-  background-color: var(--header-nav);
+  #header-nav {
+    background-color: var(--header-nav);
+  }
+
+  #jumboStyle {
+    box-shadow: 0px 3px 4px black;
+    background-color: var(--secondary-bg);
+    margin-top: 80px;
+  }
+
+  .container-fluid {
+    padding: 2rem 2rem 0rem 2rem;
+  }
 }
 
 .social-links {
   color: var(--text-accent);
-}
 
-.social-links:hover {
-  color: var(--header-nav);
-}
-
-.icons .fas:hover {
-  color: var(--text-accent);
-}
-
-#jumboStyle {
-  box-shadow: 0px 3px 4px black;
-  background-color: var(--secondary-bg);
-  margin-top: 80px;
+  &:hover {
+    color: var(--header-nav);
+  }
 }
 
 .save-note {
@@ -56,6 +56,10 @@ html, body {
   margin-right: 15px;
   font-size: 1.5rem;
   cursor: pointer;
+
+  &:hover {
+    color: var(--text-accent);
+  }
 }
 
 .note-textarea, .note-title {
@@ -105,10 +109,6 @@ form *,
   }
 }
 
-.header-background {
-  background-color: var(--text-accent)
-}
-
 .list-container .list-group,
 .list-container .list-group-item:first-child,
 .list-container .card,
@@ -116,10 +116,12 @@ form *,
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-article section > * {
-  box-shadow: 0.15rem 0.15rem 0.15rem #9a9a9a;
-}
-
-.container-fluid {
-  padding: 2rem 2rem 0rem 2rem;
+article section {
+  .header-background {
+    background-color: var(--text-accent)
+  }
+  
+  > * {
+    box-shadow: 0.15rem 0.15rem 0.15rem #9a9a9a;
+  }
 }
