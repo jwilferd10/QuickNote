@@ -97,6 +97,12 @@ form *,
 
   i {
     font-size: 1.3rem;
+    color: var(--primary-action);
+
+    &:hover {
+      color: #fd3c4c;
+      font-size: 1.4rem;
+    }
   }
 
   .list-group-item {
