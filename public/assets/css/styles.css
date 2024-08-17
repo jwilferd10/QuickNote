@@ -115,22 +115,6 @@ html, body {
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-/* .list-container i {
-  font-size: 1.1rem;
-  cursor: pointer;
-} */
-
-/* 
-.list-container .list-group-item {
-  border-radius: 0.75rem !important;
-  background-color: var(--list-item-bg);
-  color: white;
-  box-shadow: 0.1rem 0.1rem 0.2rem #9a9a9a;
-  padding: 1rem;
-  margin: 0.25rem;
-  cursor: pointer;
-} */
-
 article section > * {
   box-shadow: 0.15rem 0.15rem 0.15rem #9a9a9a;
 }
