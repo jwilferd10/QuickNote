@@ -81,10 +81,16 @@ html, body {
   color: #757575;
 }
 
-.list-container .card,
-#note-form .card {
+form *,
+.card {
+  background-color: var(--secondary-bg);
   height: calc(100vh - 10rem);
 }
+
+/* .list-container .card,
+#note-form .card {
+  height: calc(100vh - 10rem);
+} */
 
 .list-container {
   padding-left: 0;
@@ -123,7 +129,8 @@ article section > * {
   padding: 2rem 2rem 0rem 2rem;
 }
 
-form *,
+/* form *,
 .card {
   background-color: var(--secondary-bg);
-}
+  height: calc(100vh - 10rem);
+} */
