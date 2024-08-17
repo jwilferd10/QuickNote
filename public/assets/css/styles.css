@@ -87,11 +87,6 @@ form *,
   height: calc(100vh - 10rem);
 }
 
-/* .list-container .card,
-#note-form .card {
-  height: calc(100vh - 10rem);
-} */
-
 .list-container {
   padding-left: 0;
 
@@ -128,9 +123,3 @@ article section > * {
 .container-fluid {
   padding: 2rem 2rem 0rem 2rem;
 }
-
-/* form *,
-.card {
-  background-color: var(--secondary-bg);
-  height: calc(100vh - 10rem);
-} */
