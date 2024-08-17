@@ -82,6 +82,7 @@ html, body {
 
   &:read-only {
     color: #757575;
+    cursor: not-allowed;
   }
 }
 
