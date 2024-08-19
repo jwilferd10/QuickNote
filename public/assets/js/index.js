@@ -104,11 +104,8 @@ const handleNoteDelete = (e) => {
 // Sets the activeNote and displays it
 const handleNoteView = (e) => {
   e.preventDefault();
-  console.log('test')
-
-  const note = e.target;
-  activeNote = JSON.parse(note.parentElement.getAttribute('data-note'));
-
+  const note = e.target.closest('.list-group-item');
+  activeNote = JSON.parse(note.getAttribute('data-note'));
   renderActiveNote();
 };
 
@@ -205,6 +202,9 @@ if (window.location.pathname === '/notes') {
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
-}
+  noteList.forEach((listElement) => {
+    listElement.addEventListener('click', handleNoteView);
+  });
+};
 
 getAndRenderNotes();
