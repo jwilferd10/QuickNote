@@ -151,8 +151,6 @@ const renderNoteList = async (notes) => {
     spanEl.setAttribute('role', 'text');
     spanEl.setAttribute('aria-label', 'Note Title');
 
-    spanEl.addEventListener('click', handleNoteView);
-
     liEl.append(spanEl);
 
     // create and append a delete button if true
