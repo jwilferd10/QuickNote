@@ -1,4 +1,4 @@
-# Fantastical Note Taker
+# QuickNote
 This project is currently undergoing a facelift and will be updated frequently in the coming time. This is a work in progress!
 
 
@@ -40,15 +40,13 @@ This project is currently undergoing a facelift and will be updated frequently i
   Install it through Github!
 
   ## Usage:
-  Click this link: https://fantastical-note-taker.herokuapp.com/
-  - This will take you to the live deployment
-  - To create a note click the pencil button and enter details
-  - To save the note click the save icon
-  - To view old notes click ontop of the old note names
-    ### OR
-  To run it on the back-end type 'node server'
-  - 'node server' activates this on local port 3001
-  - Navigate to "http://localhost:3001/notes" to test it out there.
+  - The `Note Header` will change based on current actions
+    - Users will see a visual notification on the header based on adding/viewing a note
+  - To create a note, click on the `pencil` emoji. The header will indicate when you can add a note.
+  - When your note is capable of saving a `save emoji` (floppy-disk icon) will appear, clicking that will save your note
+    - Saved notes will feature the note-title as it's list title.
+  - Clicking a saved note will showcase the title and text.
+  - Clicking the trash-can will delete an existing note
   
   ## Contact Information:
   - Github: [jwilferd10](https://github.com/jwilferd10)
