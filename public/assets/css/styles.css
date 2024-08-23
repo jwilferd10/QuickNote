@@ -113,6 +113,10 @@ form *,
 .card {
   background-color: var(--secondary-bg);
   height: calc(100vh - 10rem);
+  
+  @media (max-width: 767px) {
+    height: calc(35vh - 3rem);
+  }
 }
 
 .list-container {
@@ -153,5 +157,15 @@ article section {
   
   > * {
     box-shadow: 0.15rem 0.15rem 0.15rem #9a9a9a;
+  }
+}
+
+@media (max-width: 767px) {
+  .row {
+    gap: 2rem;
+  }
+
+  #note-form {
+    padding: 0px 0.75rem 0px 0rem;
   }
 }
