@@ -60,6 +60,10 @@ html, body {
 
 .container-fluid {
   padding: 2rem 2rem 0rem 2rem;
+
+  @media (max-width: 767px) {
+    padding: 2rem 1.5rem 2rem 1.5rem;
+  }
 }
 
 .social-links {
@@ -165,7 +169,8 @@ article section {
     gap: 2rem;
   }
 
-  #note-form {
-    padding: 0px 0.75rem 0px 0rem;
+  .list-container, #note-form {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
