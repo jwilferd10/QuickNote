@@ -185,7 +185,9 @@ form *,
     }
 
     &:active {
-      transform: translate(0px, 3px)
+      background-color: var(--text-accent);
+      color: var(--header-nav);
+      transform: translate(0px, 3px);
     }
   }
 }
