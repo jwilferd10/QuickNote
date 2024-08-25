@@ -86,6 +86,16 @@ html, body {
   }
 }
 
+.btn {
+  background-color: var(--text-accent);
+  color: white;
+
+  &:hover {
+    background-color: var(--header-nav);
+    color: white;
+  }
+}
+
 .save-note {
   display: none;
 }
