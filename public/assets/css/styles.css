@@ -86,7 +86,7 @@ html, body {
   }
 }
 
-.btn {
+.enter-btn {
   background-color: var(--text-accent);
   color: white;
 
