@@ -144,6 +144,9 @@ const renderNoteList = async (notes) => {
     const liEl = document.createElement('li');
     liEl.classList.add('list-group-item');
 
+    // Set each list element to be draggable
+    liEl.setAttribute('draggable', 'true');
+
     const spanEl = document.createElement('span');
     spanEl.innerText = text;
 
