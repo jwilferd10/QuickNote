@@ -200,6 +200,16 @@ form *,
       transform: translate(0px, 3px);
     }
   }
+
+  footer {
+    background-color: var(--primary-action); 
+    color: white;
+    box-shadow: unset;
+
+    span {
+      box-shadow: unset;
+    }
+  }
 }
 
 .list-container .list-group,
