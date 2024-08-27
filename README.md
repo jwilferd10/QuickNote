@@ -1,22 +1,23 @@
 # QuickNote
 This project is currently undergoing a facelift and will be updated frequently in the coming time. This is a work in progress!
 
+Live Deployment Link: COMING SOON
+  
+## Screenshots of Deployed Application:
+![image](Note-Taker-Screenshot.png)
+![image](Note-Taker-Screenshot-2.png)
+  
+## Table of Contents 
+  - [Description](#wave-description)
+  - [User Story](#book-user-story)
+  - [Resources Used](#floppy_disk-resources-used)
+  - [Usage](#minidisc-usage)
+  - [Contributors](#paperclip-contributors)
 
-  Live Deployment Link: COMING SOON
-  
-  ## Screenshots of Deployed Application:
-  ![image](Note-Taker-Screenshot.png)
-  ![image](Note-Taker-Screenshot-2.png)
-  
-  ## Table of Contents 
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contact Information](#contact-information)
+## :wave: Description: 
+Ever wondering how to make a quick and easy note on the web? Look no further, that's provided here with the fantastical note taker! Created in effort to have a place to digitally store notes. Like all challenges this one pushed me and it took awhile to figure out if I've got everything working. To see it work as is, is a wonderful feeling and a reminder to myself that with enough time to trial and error you can get a neat reward at the end of it. So please, enjoy the note-taker!
 
-  ## Description:
-  Ever wondering how to make a quick and easy note on the web? Look no further, that's provided here with the fantastical note taker! Created in effort to have a place to digitally store notes. Like all challenges this one pushed me and it took awhile to figure out if I've got everything working. To see it work as is, is a wonderful feeling and a reminder to myself that with enough time to trial and error you can get a neat reward at the end of it. So please, enjoy the note-taker!
-  
+## :book: User Story:
 ### GIVEN a note-taking application
  - WHEN I open the Note Taker
    - THEN I am presented with a landing page with a link to a notes page
@@ -36,10 +37,10 @@ This project is currently undergoing a facelift and will be updated frequently i
  - WHEN I click on the Write icon in the navigation at the top of the page
    - THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
-  ## Installation:
-  Install it through Github!
+## :floppy_disk: Resources Used:
+(COMING SOON)
 
-  ## Usage:
+## :minidisc: Usage:
   - The `Note Header` will change based on current actions
     - Users will see a visual notification on the header based on adding/viewing a note
   - To create a note, click on the `pencil` emoji. The header will indicate when you can add a note.
@@ -48,6 +49,6 @@ This project is currently undergoing a facelift and will be updated frequently i
   - Clicking a saved note will showcase the title and text.
   - Clicking the trash-can will delete an existing note
   
-  ## Contact Information:
+## :paperclip: Contributors
   - Github: [jwilferd10](https://github.com/jwilferd10)
   - Email: jwilferd10@yahoo.com 
