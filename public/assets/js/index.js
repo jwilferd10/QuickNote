@@ -156,6 +156,12 @@ const renderNoteList = async (notes) => {
 
     liEl.append(spanEl);
 
+    // Add dragstart event listener to the list item
+    liEl.addEventListener('dragstart', (event) => {
+      console.log('Dragging started for note:', event.target);
+      event.dataTransfer.setData('text/plain', liEl.getAttribute('data-note'));
+    })
+
     // create and append a delete button if true
     if (delBtn) {
       const delBtnEl = document.createElement('i');
