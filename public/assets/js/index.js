@@ -89,10 +89,7 @@ const handleNoteDelete = (event) => {
   // If the event is triggered by the drag-and-drop the event will be an object with noteId
   const noteId = event.noteId || JSON.parse(event.target.parentElement.getAttribute('data-note')).id;
 
-  // if (activeNote.id === noteId) {
-  //   activeNote = {};
-  // }
-
+  // Set activeNote to an empty object, invoke RenderNotes to refresh the list, then reset the form
   deleteNote(noteId).then(() => {
     activeNote = {};
     getAndRenderNotes();
