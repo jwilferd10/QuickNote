@@ -11,6 +11,7 @@ if (window.location.pathname === '/notes') {
   saveNoteBtn = document.querySelector('.save-note');
   newNoteBtn = document.querySelector('.new-note');
   noteList = document.querySelectorAll('.list-container .list-group');
+  deleteZone = document.querySelector('.delete-zone');
 }
 
 // Show an element
@@ -160,7 +161,7 @@ const renderNoteList = async (notes) => {
     liEl.addEventListener('dragstart', (event) => {
       console.log('Dragging started for note:', event.target);
       event.dataTransfer.setData('text/plain', liEl.getAttribute('data-note'));
-    })
+    });
 
     // create and append a delete button if true
     if (delBtn) {
@@ -212,6 +213,11 @@ if (window.location.pathname === '/notes') {
   noteList.forEach((listElement) => {
     listElement.addEventListener('click', handleNoteView);
   });
+
+  deleteZone.addEventListener('dragover', (event) => {
+    event.preventDefault();
+    console.log('Dragged over the delete zone');
+  })
 };
 
 getAndRenderNotes();
