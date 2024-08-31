@@ -85,12 +85,9 @@ const handleNoteSave = () => {
 };
 
 // Delete the clicked note
-const handleNoteDelete = (e) => {
-  // prevents the click listener for the list from being called when the button inside of it is clicked
-  e.stopPropagation();
-
-  const note = e.target;
-  const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
+const handleNoteDelete = (event) => {
+  // If the event is triggered by the drag-and-drop the event will be an object with noteId
+  const noteId = event.noteId || JSON.parse(event.target.parentElement.getAttribute('data-note')).id;
 
   if (activeNote.id === noteId) {
     activeNote = {};
@@ -222,11 +219,16 @@ if (window.location.pathname === '/notes') {
   deleteZone.addEventListener('drop', (event) => {
     event.preventDefault();
 
-    // Retrieve the note data from dataTransfer
+    // Retrieve the note data using dataTransfer
     const noteData = event.dataTransfer.getData('text/plain');
+
+    // Parse the data into note
     const note = JSON.parse(noteData);
 
     console.log(`${note.title} has been dropped within delete section`);
+
+    // Pass note's note.id directly to handleNoteDelete for deletion
+    handleNoteDelete({ noteId: note.id });
   })
 };
 
