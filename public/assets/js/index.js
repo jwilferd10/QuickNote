@@ -218,6 +218,16 @@ if (window.location.pathname === '/notes') {
     event.preventDefault();
     console.log('Dragged over the delete zone');
   })
+
+  deleteZone.addEventListener('drop', (event) => {
+    event.preventDefault();
+
+    // Retrieve the note data from dataTransfer
+    const noteData = event.dataTransfer.getData('text/plain');
+    const note = JSON.parse(noteData);
+
+    console.log(`${note.title} has been dropped within delete section`);
+  })
 };
 
 getAndRenderNotes();
