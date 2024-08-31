@@ -89,11 +89,12 @@ const handleNoteDelete = (event) => {
   // If the event is triggered by the drag-and-drop the event will be an object with noteId
   const noteId = event.noteId || JSON.parse(event.target.parentElement.getAttribute('data-note')).id;
 
-  if (activeNote.id === noteId) {
-    activeNote = {};
-  }
+  // if (activeNote.id === noteId) {
+  //   activeNote = {};
+  // }
 
   deleteNote(noteId).then(() => {
+    activeNote = {};
     getAndRenderNotes();
     renderActiveNote();
   });
