@@ -161,6 +161,7 @@ form *,
 .card {
   background-color: var(--secondary-bg);
   height: calc(100vh - 10rem);
+  position: relative;
   
   @media (max-width: 767px) {
     height: calc(35vh - 3rem);
@@ -201,10 +202,19 @@ form *,
     }
   }
 
-  footer {
+  .card {
+    position: relative;
+  }
+
+  .delete-zone {
     background-color: var(--primary-action); 
     color: white;
     box-shadow: unset;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* transform: translateY(100%); */
 
     span {
       box-shadow: unset;
