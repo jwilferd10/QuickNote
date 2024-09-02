@@ -214,11 +214,18 @@ form *,
     bottom: 0;
     left: 0;
     right: 0;
-    /* transform: translateY(100%); */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(100%);
+    opacity: 0;
 
     span {
       box-shadow: unset;
     }
+  }
+
+  .delete-zone.active {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 

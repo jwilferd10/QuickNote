@@ -156,7 +156,15 @@ const renderNoteList = async (notes) => {
     liEl.addEventListener('dragstart', (event) => {
       console.log('Dragging started for note:', event.target);
       event.dataTransfer.setData('text/plain', liEl.getAttribute('data-note'));
+
+      // Add active class to delete-zone when dragging begins
+      deleteZone.classList.add('active');
     });
+
+    liEl.addEventListener('dragend', () => {
+      // Remove the active class when dragging ends
+      deleteZone.classList.remove('active');
+    })
 
     // create and append a delete button if true
     if (delBtn) {
