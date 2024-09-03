@@ -222,6 +222,14 @@ if (window.location.pathname === '/notes') {
     console.log('Dragged over the delete zone');
   })
 
+  deleteZone.addEventListener('dragenter', () => {
+    deleteZone.classList.add('hovered');
+  })
+
+  deleteZone.addEventListener('dragleave', () => {
+    deleteZone.classList.remove('hovered');
+  })
+
   deleteZone.addEventListener('drop', (event) => {
     event.preventDefault();
 

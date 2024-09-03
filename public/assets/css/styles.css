@@ -207,14 +207,13 @@ form *,
   }
 
   .delete-zone {
-    background-color: var(--primary-action); 
     color: white;
     box-shadow: unset;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.4s ease, opacity 0.3s ease;
     transform: translateY(100%);
     opacity: 0;
 
@@ -224,8 +223,13 @@ form *,
   }
 
   .delete-zone.active {
+    background-color: #fa5e6b;
     transform: translateY(0);
     opacity: 1;
+  }
+
+  .delete-zone.hovered {
+    background-color: var(--primary-action);
   }
 }
 
