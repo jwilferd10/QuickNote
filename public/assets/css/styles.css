@@ -217,19 +217,19 @@ form *,
     transform: translateY(100%);
     opacity: 0;
 
+    &.active {
+      background-color: #fa5e6b;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    &.hovered {
+      background-color: var(--primary-action);
+    }
+
     span {
       box-shadow: unset;
     }
-  }
-
-  .delete-zone.active {
-    background-color: #fa5e6b;
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  .delete-zone.hovered {
-    background-color: var(--primary-action);
   }
 }
 
