@@ -4,8 +4,7 @@ This project is currently undergoing a facelift and will be updated frequently i
 Live Deployment Link: COMING SOON
   
 ## Screenshots of Deployed Application:
-![image](Note-Taker-Screenshot.png)
-![image](Note-Taker-Screenshot-2.png)
+(Coming Soon!)
   
 ## Table of Contents 
   - [Description](#wave-description)
