@@ -178,6 +178,7 @@ form *,
     &:hover {
       color: #fd3c4c;
       font-size: 1.4rem;
+      cursor: pointer;
     }
   }
 
