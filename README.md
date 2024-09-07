@@ -14,7 +14,16 @@ Live Deployment Link: COMING SOON
   - [Contributors](#paperclip-contributors)
 
 ## :wave: Description: 
-Ever wondering how to make a quick and easy note on the web? Look no further, that's provided here with the fantastical note taker! Created in effort to have a place to digitally store notes. Like all challenges this one pushed me and it took awhile to figure out if I've got everything working. To see it work as is, is a wonderful feeling and a reminder to myself that with enough time to trial and error you can get a neat reward at the end of it. So please, enjoy the note-taker!
+QuickNote is a sleek, user-friendly note-taking application inspired by classic notepads, designed to help users stay organized. With QuickNote, users can effortlessly create, edit, and delete notes, making it perfect for jotting down ideas, reminders, or important information.
+
+The app features a modern UI with intuitive drag-and-drop functionality, allowing users to manage their notes efficiently. Key features include:
+
+- Create Notes: Easily create new notes with a simple, clean interface.
+- Delete Notes: Swiftly remove unwanted notes with a smooth delete feature.
+- Drag-and-Drop: Notes can be dragged into a 'delete-section' and removed that way.
+- Responsive Design: Optimized for both desktop and mobile devices, ensuring a great user experience across all platforms.
+
+Simply put, QuickNote is a tool that's ideal for anyone looking to keep track of their thoughts in an organized way.
 
 ## :book: User Story:
 ### GIVEN a note-taking application
