@@ -55,6 +55,13 @@ const deleteNote = (id) =>
     },
   });
 
+// Update a note based on it's ID
+  // Set up a put request
+  // Collect the parameters and id
+  // Set and update the JSON file and array
+
+// Be sure to add a fail safe
+
 const renderActiveNote = () => {
   hide(saveNoteBtn);
 
