@@ -207,6 +207,7 @@ form *,
 
   .card {
     position: relative;
+    overflow: hidden;
   }
 
   .delete-zone {
