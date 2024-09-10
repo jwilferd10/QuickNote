@@ -65,6 +65,13 @@ const deleteNote = (id) =>
 const renderActiveNote = () => {
   hide(saveNoteBtn);
 
+  // Modularize the logic found within the if/else statement
+  // Create a function that targets the read-only state
+  // Create a function for setting the activeNote title and text
+  // Create a function that sets the header
+
+  // Handle the various states with a switch statement
+
   if (activeNote.id) {
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
