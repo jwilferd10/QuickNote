@@ -173,6 +173,10 @@ const renderNoteList = async (notes) => {
       deleteZone.classList.remove('active');
     })
 
+    const editBtnEl = document.createElement('i');
+    editBtnEl.classList.add('fas', 'fa-edit', 'float-right', 'edit-note');
+    liEl.append(editBtnEl);
+
     // create and append a delete button if true
     if (delBtn) {
       const delBtnEl = document.createElement('i');
