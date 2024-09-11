@@ -65,29 +65,36 @@ const deleteNote = (id) =>
 const setNoteContent = (title, text) => {
   noteTitle.value = title;
   noteText.value = text;
+};
+
+const setReadOnly = (isReadOnly) => {
+  if(isReadOnly) {
+    noteTitle.setAttribute('readonly', true);
+    noteText.setAttribute('readonly', true);
+  } else {
+    noteTitle.removeAttribute('readonly');
+    noteText.removeAttribute('readonly');
+  }
 }
 
 const viewNote = () => {
-  noteTitle.setAttribute('readonly', true);
-  noteText.setAttribute('readonly', true);
+  setReadOnly(true);
   setNoteContent(activeNote.title, activeNote.text);
   noteHeader.textContent = 'Viewing Note';
-}
+};
 
 const createNote = () => {
-  noteTitle.removeAttribute('readonly');
-  noteText.removeAttribute('readonly');
+  setReadOnly(false);
   noteTitle.value = '';
   noteText.value = '';
   noteHeader.textContent = 'Add Note';
-}
+};
 
 const editNote = () => {
-  noteTitle.removeAttribute('readonly');
-  noteText.removeAttribute('readonly');
+  setReadOnly(false);
   setNoteContent(activeNote.title, activeNote.text);
   noteHeader.textContent = 'Editing Note';
-}
+};
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
