@@ -62,11 +62,15 @@ const deleteNote = (id) =>
 
 // Be sure to add a fail safe
 
+const setNoteContent = (title, text) => {
+  noteTitle.value = title;
+  noteText.value = text;
+}
+
 const viewNote = () => {
   noteTitle.setAttribute('readonly', true);
   noteText.setAttribute('readonly', true);
-  noteTitle.value = activeNote.title;
-  noteText.value = activeNote.text;
+  setNoteContent(activeNote.title, activeNote.text);
   noteHeader.textContent = 'Viewing Note';
 }
 
@@ -81,8 +85,7 @@ const createNote = () => {
 const editNote = () => {
   noteTitle.removeAttribute('readonly');
   noteText.removeAttribute('readonly');
-  noteTitle.value = activeNote.title;
-  noteText.value = activeNote.text;
+  setNoteContent(activeNote.title, activeNote.text);
   noteHeader.textContent = 'Editing Note';
 }
 
