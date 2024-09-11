@@ -62,6 +62,30 @@ const deleteNote = (id) =>
 
 // Be sure to add a fail safe
 
+const viewNote = () => {
+  noteTitle.setAttribute('readonly', true);
+  noteText.setAttribute('readonly', true);
+  noteTitle.value = activeNote.title;
+  noteText.value = activeNote.text;
+  noteHeader.textContent = 'Viewing Note';
+}
+
+const createNote = () => {
+  noteTitle.removeAttribute('readonly');
+  noteText.removeAttribute('readonly');
+  noteTitle.value = '';
+  noteText.value = '';
+  noteHeader.textContent = 'Add Note';
+}
+
+const editNote = () => {
+  noteTitle.removeAttribute('readonly');
+  noteText.removeAttribute('readonly');
+  noteTitle.value = activeNote.title;
+  noteText.value = activeNote.text;
+  noteHeader.textContent = 'Editing Note';
+}
+
 const renderActiveNote = () => {
   hide(saveNoteBtn);
 
@@ -72,19 +96,19 @@ const renderActiveNote = () => {
 
   // Handle the various states with a switch statement
 
-  if (activeNote.id) {
-    noteTitle.setAttribute('readonly', true);
-    noteText.setAttribute('readonly', true);
-    noteTitle.value = activeNote.title;
-    noteText.value = activeNote.text;
-    noteHeader.textContent = 'Viewing Note';
-  } else {
-    noteTitle.removeAttribute('readonly');
-    noteText.removeAttribute('readonly');
-    noteTitle.value = '';
-    noteText.value = '';
-    noteHeader.textContent = 'Add Note';
-  }
+//   if (activeNote.id) {
+//     noteTitle.setAttribute('readonly', true);
+//     noteText.setAttribute('readonly', true);
+//     noteTitle.value = activeNote.title;
+//     noteText.value = activeNote.text;
+//     noteHeader.textContent = 'Viewing Note';
+//   } else {
+//     noteTitle.removeAttribute('readonly');
+//     noteText.removeAttribute('readonly');
+//     noteTitle.value = '';
+//     noteText.value = '';
+//     noteHeader.textContent = 'Add Note';
+//   }
 };
 
 const handleNoteSave = () => {
