@@ -62,11 +62,13 @@ const deleteNote = (id) =>
 
 // Be sure to add a fail safe
 
+// Parameters returns the title/text, this will display the string content.
 const setNoteContent = (title, text) => {
   noteTitle.value = title;
   noteText.value = text;
 };
 
+// When invoked, toggles the readonly state based on boolean value
 const setReadOnly = (isReadOnly) => {
   if(isReadOnly) {
     noteTitle.setAttribute('readonly', true);
