@@ -153,6 +153,11 @@ const handleNewNoteView = (e) => {
   renderActiveNote('create');
 };
 
+// Create a function that will handle the editing note view
+  // Invoke renderActiveNote and pass 'edit' into it.
+
+  // Invoke handleNoteView to see the note edited
+
 const handleRenderSaveBtn = () => {
   if (!noteTitle.value.trim() || !noteText.value.trim()) {
     hide(saveNoteBtn);
