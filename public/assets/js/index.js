@@ -120,7 +120,7 @@ const handleNoteSave = () => {
   };
   saveNote(newNote).then(() => {
     getAndRenderNotes();
-    renderActiveNote();
+    renderActiveNote('create');
   });
 };
 
@@ -133,7 +133,7 @@ const handleNoteDelete = (event) => {
   deleteNote(noteId).then(() => {
     activeNote = {};
     getAndRenderNotes();
-    renderActiveNote();
+    renderActiveNote('create');
   });
 };
 
@@ -142,13 +142,13 @@ const handleNoteView = (e) => {
   e.preventDefault();
   const note = e.target.closest('.list-group-item');
   activeNote = JSON.parse(note.getAttribute('data-note'));
-  renderActiveNote();
+  renderActiveNote('view');
 };
 
 // Sets the activeNote to and empty object and allows the user to enter a new note
 const handleNewNoteView = (e) => {
   activeNote = {};
-  renderActiveNote();
+  renderActiveNote('create');
 };
 
 const handleRenderSaveBtn = () => {
