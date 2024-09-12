@@ -111,19 +111,6 @@ const renderActiveNote = (mode) => {
       editNote();
       break;
   }
-//   if (activeNote.id) {
-//     noteTitle.setAttribute('readonly', true);
-//     noteText.setAttribute('readonly', true);
-//     noteTitle.value = activeNote.title;
-//     noteText.value = activeNote.text;
-//     noteHeader.textContent = 'Viewing Note';
-//   } else {
-//     noteTitle.removeAttribute('readonly');
-//     noteText.removeAttribute('readonly');
-//     noteTitle.value = '';
-//     noteText.value = '';
-//     noteHeader.textContent = 'Add Note';
-//   }
 };
 
 const handleNoteSave = () => {
