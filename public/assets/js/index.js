@@ -96,16 +96,21 @@ const editNote = () => {
   noteHeader.textContent = 'Editing Note';
 };
 
-const renderActiveNote = () => {
+const renderActiveNote = (mode) => {
   hide(saveNoteBtn);
 
-  // Modularize the logic found within the if/else statement
-  // Create a function that targets the read-only state
-  // Create a function for setting the activeNote title and text
-  // Create a function that sets the header
-
   // Handle the various states with a switch statement
-
+  switch (mode) {
+    case 'create':
+      createNote();
+      break;
+    case 'view': 
+      viewNote();
+      break;
+    case 'edit':
+      editNote();
+      break;
+  }
 //   if (activeNote.id) {
 //     noteTitle.setAttribute('readonly', true);
 //     noteText.setAttribute('readonly', true);
