@@ -150,12 +150,6 @@ const handleNoteView = (e) => {
   renderActiveNote('view');
 };
 
-// Sets the activeNote to and empty object and allows the user to enter a new note
-const handleNewNoteView = (e) => {
-  activeNote = {};
-  renderActiveNote('create');
-};
-
 // Create a function that will handle the editing note view
 const handleEditNoteView = (e) => {
   e.stopPropagation()
@@ -163,13 +157,15 @@ const handleEditNoteView = (e) => {
   const note = e.target.closest('.list-group-item');
   activeNote = JSON.parse(note.getAttribute('data-note'));
 
-  // console.log(activeNote.title)
-  // console.log(activeNote.text);
-
   // Invoke renderActiveNote and pass 'edit' into it.
   renderActiveNote('edit');
+};
 
-}
+// Sets the activeNote to and empty object and allows the user to enter a new note
+const handleNewNoteView = (e) => {
+  activeNote = {};
+  renderActiveNote('create');
+};
 
 const handleRenderSaveBtn = () => {
   if (!noteTitle.value.trim() || !noteText.value.trim()) {
