@@ -104,12 +104,15 @@ const renderActiveNote = (mode) => {
   // Handle the various states with a switch statement
   switch (mode) {
     case 'create':
+      console.log('Create Mode');
       createNote();
       break;
     case 'view': 
+    console.log('View Mode');
       viewNote();
       break;
     case 'edit':
+      console.log('Edit Mode');
       editNote();
       break;
   }
@@ -154,9 +157,19 @@ const handleNewNoteView = (e) => {
 };
 
 // Create a function that will handle the editing note view
-  // Invoke renderActiveNote and pass 'edit' into it.
+const handleEditNoteView = (e) => {
+  e.stopPropagation()
 
-  // Invoke handleNoteView to see the note edited
+  const note = e.target.closest('.list-group-item');
+  activeNote = JSON.parse(note.getAttribute('data-note'));
+
+  // console.log(activeNote.title)
+  // console.log(activeNote.text);
+
+  // Invoke renderActiveNote and pass 'edit' into it.
+  renderActiveNote('edit');
+
+}
 
 const handleRenderSaveBtn = () => {
   if (!noteTitle.value.trim() || !noteText.value.trim()) {
@@ -215,7 +228,9 @@ const renderNoteList = async (notes) => {
 
     const editBtnEl = document.createElement('i');
     editBtnEl.classList.add('fas', 'fa-edit', 'float-right', 'edit-note');
+    editBtnEl.addEventListener('click', handleEditNoteView);
     liEl.append(editBtnEl);
+  
 
     // create and append a delete button if true
     if (delBtn) {
