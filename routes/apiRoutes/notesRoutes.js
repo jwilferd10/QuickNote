@@ -1,7 +1,7 @@
 import express from 'express';
 import { v4 as uuidv4 } from 'uuid';
 import notes from '../../data/notes.json' assert { type: 'json' };
-import { findByID, createNewNotes, validateNote, deleteNote } from '../../lib/notes.js';
+import { findByID, createNewNotes, validateNote, deleteNote, updateNote } from '../../lib/notes.js';
 
 // Create the router instance
 const router = express.Router();
