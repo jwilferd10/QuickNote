@@ -7,12 +7,12 @@ import { findByID, createNewNotes, validateNote, deleteNote } from '../../lib/no
 const router = express.Router();
 
 router.get('/notes', (req, res) => {
-    let results = notes;
+    let results = notes.notes;
     res.json(results);
 });
 
 router.get('/notes/:id', (req, res) => {
-    const result = findByID(req.params.id, notes);
+    const result = findByID(req.params.id, notes.notes);
     res.json(result);
 });
 
