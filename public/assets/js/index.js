@@ -55,12 +55,17 @@ const deleteNote = (id) =>
     },
   });
 
-// Update a note based on it's ID
-const editNote = (id) => {
-  // Set up a put request
-  // Collect the parameters and id
-  // Set and update the JSON file and array
-};
+// // Update a note based on it's ID
+// const editNote = (id, title, text) => {
+//   fetch(`/api/notes/${id}`, {
+//     method: 'PUT',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify({ title, text }),
+//   })
+// };
+
 
 // Parameters returns the title/text, this will display the string content.
 const setNoteContent = (title, text) => {
@@ -186,8 +191,10 @@ const renderNoteList = async (notes) => {
   // Get the JSON data from the response
   let jsonResponse = await notes.json();
 
+  console.log(jsonResponse);
+
   // Access the array from the object
-  let jsonNotes = jsonResponse.notes || [];
+  let jsonNotes = jsonResponse || [];
 
   // If on notes page, clear existing note list 
   if (window.location.pathname === '/notes') {
