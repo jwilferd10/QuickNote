@@ -45,4 +45,17 @@ router.post('/notes', (req, res) => {
     }
 });
 
+router.put('/notes/:id', (req, res) => {
+    
+    // Call update function from notes.js
+    const result = updateNote(req.params.id, req.body, notes.notes);
+
+    // If the note is found, return updated note
+    if (result) {
+        res.json(result);
+    } else {
+        res.status(404).send('Note not found');
+    }
+})
+
 export default router;
