@@ -56,11 +56,11 @@ const deleteNote = (id) =>
   });
 
 // Update a note based on it's ID
+const editNote = (id) => {
   // Set up a put request
   // Collect the parameters and id
   // Set and update the JSON file and array
-
-// Be sure to add a fail safe
+};
 
 // Parameters returns the title/text, this will display the string content.
 const setNoteContent = (title, text) => {
@@ -79,20 +79,20 @@ const setReadOnly = (isReadOnly) => {
   }
 }
 
-const viewNote = () => {
+const viewNoteMode = () => {
   setReadOnly(true);
   setNoteContent(activeNote.title, activeNote.text);
   noteHeader.textContent = 'Viewing Note';
 };
 
-const createNote = () => {
+const createNoteMode = () => {
   setReadOnly(false);
   noteTitle.value = '';
   noteText.value = '';
   noteHeader.textContent = 'Add Note';
 };
 
-const editNote = () => {
+const editNoteMode = () => {
   setReadOnly(false);
   setNoteContent(activeNote.title, activeNote.text);
   noteHeader.textContent = 'Editing Note';
@@ -105,15 +105,15 @@ const renderActiveNote = (mode) => {
   switch (mode) {
     case 'create':
       console.log('Create Mode');
-      createNote();
+      createNoteMode();
       break;
     case 'view': 
     console.log('View Mode');
-      viewNote();
+      viewNoteMode();
       break;
     case 'edit':
       console.log('Edit Mode');
-      editNote();
+      editNoteMode();
       break;
   }
 };
