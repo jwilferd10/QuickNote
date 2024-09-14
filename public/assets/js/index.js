@@ -118,6 +118,12 @@ const renderActiveNote = (mode) => {
   }
 };
 
+// Helper function designed for collecting and returning active note info
+const setActiveNote = (e) => {
+  const note = e.target.closest('.list-group-item');
+  return JSON.parse(note.getAttribute('data-note'));
+};
+
 const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,
@@ -145,19 +151,19 @@ const handleNoteDelete = (event) => {
 // Sets the activeNote and displays it
 const handleNoteView = (e) => {
   e.preventDefault();
-  const note = e.target.closest('.list-group-item');
-  activeNote = JSON.parse(note.getAttribute('data-note'));
+
+  // Set activeNote to the value collected by setActiveNote
+  activeNote = setActiveNote(e);
   renderActiveNote('view');
 };
 
 // Create a function that will handle the editing note view
 const handleEditNoteView = (e) => {
+  // Prevents the listEl's click event from bubbling and voiding this invokation
   e.stopPropagation()
 
-  const note = e.target.closest('.list-group-item');
-  activeNote = JSON.parse(note.getAttribute('data-note'));
-
-  // Invoke renderActiveNote and pass 'edit' into it.
+  // Set activeNote to the value collected by setActiveNote
+  activeNote = setActiveNote(e);
   renderActiveNote('edit');
 };
 
