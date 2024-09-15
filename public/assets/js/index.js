@@ -239,26 +239,18 @@ const renderNoteList = async (notes) => {
       deleteZone.classList.add('active');
     });
 
-    liEl.addEventListener('dragend', () => {
-      // Remove the active class when dragging ends
-      deleteZone.classList.remove('active');
-    })
+    // Remove the active class when dragging ends
+    liEl.addEventListener('dragend', () => deleteZone.classList.remove('active'));
 
     const editBtnEl = document.createElement('i');
     editBtnEl.classList.add('fas', 'fa-edit', 'float-right', 'edit-note');
     editBtnEl.addEventListener('click', handleEditNoteView);
     liEl.append(editBtnEl);
   
-
     // create and append a delete button if true
     if (delBtn) {
       const delBtnEl = document.createElement('i');
-      delBtnEl.classList.add(
-        'fas',
-        'fa-trash-alt',
-        'float-right',
-        'delete-note'
-      );
+      delBtnEl.classList.add('fas', 'fa-trash-alt', 'float-right', 'delete-note');
       delBtnEl.addEventListener('click', handleNoteDelete);
 
       // append to the list item element
@@ -279,7 +271,6 @@ const renderNoteList = async (notes) => {
     const li = createLi(note.title);
     // store the note data in a data attribute
     li.dataset.note = JSON.stringify(note);
-
     noteListItems.push(li);
   });
 
@@ -297,22 +288,10 @@ if (window.location.pathname === '/notes') {
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
-  noteList.forEach((listElement) => {
-    listElement.addEventListener('click', handleNoteView);
-  });
-
-  deleteZone.addEventListener('dragover', (event) => {
-    event.preventDefault();
-    console.log('Dragged over the delete zone');
-  });
-
-  deleteZone.addEventListener('dragenter', () => {
-    deleteZone.classList.add('hovered');
-  });
-
-  deleteZone.addEventListener('dragleave', () => {
-    deleteZone.classList.remove('hovered');
-  });
+  noteList.forEach((listElement) => listElement.addEventListener('click', handleNoteView));
+  deleteZone.addEventListener('dragover', (event) => event.preventDefault());
+  deleteZone.addEventListener('dragenter', () => deleteZone.classList.add('hovered'));
+  deleteZone.addEventListener('dragleave', () => deleteZone.classList.remove('hovered'));
 
   deleteZone.addEventListener('drop', (event) => {
     event.preventDefault();
@@ -323,11 +302,9 @@ if (window.location.pathname === '/notes') {
     // Parse the data into note
     const note = JSON.parse(noteData);
 
-    console.log(`${note.title} has been dropped within delete section`);
-
     // Pass note's note.id directly to handleNoteDelete for deletion
     handleNoteDelete({ noteId: note.id });
-  })
+  });
 };
 
 getAndRenderNotes();
