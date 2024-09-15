@@ -138,9 +138,6 @@ const handleNoteSave = () => {
 
   // Check if there's an activeNote, this means we're editing an existing note
   if (activeNote && activeNote.id) {
-    console.log(activeNote.id);
-    console.log(activeNote.title);
-    console.log(activeNote.text);
     // Update the existing note
     editNote(activeNote.id, newNote.title, newNote.text)
     .then(() => {
