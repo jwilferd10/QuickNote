@@ -55,16 +55,16 @@ const deleteNote = (id) =>
     },
   });
 
-// // Update a note based on it's ID
-// const editNote = (id, title, text) => {
-//   fetch(`/api/notes/${id}`, {
-//     method: 'PUT',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify({ title, text }),
-//   })
-// };
+// Update a note based on it's ID
+const editNote = (id, title, text) => {
+  return fetch(`/api/notes/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ title, text }),
+  });
+};
 
 
 // Parameters returns the title/text, this will display the string content.
@@ -130,14 +130,30 @@ const setActiveNote = (e) => {
 };
 
 const handleNoteSave = () => {
+  // Collect values from the input field
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
   };
-  saveNote(newNote).then(() => {
-    getAndRenderNotes();
-    renderActiveNote('create');
-  });
+
+  // Check if there's an activeNote, this means we're editing an existing note
+  if (activeNote && activeNote.id) {
+    console.log(activeNote.id);
+    console.log(activeNote.title);
+    console.log(activeNote.text);
+    // Update the existing note
+    editNote(activeNote.id, newNote.title, newNote.text)
+    .then(() => {
+      getAndRenderNotes();
+      renderActiveNote('create');
+    });
+  } else {
+    // Create a new note
+    saveNote(newNote).then(() => {
+      getAndRenderNotes();
+      renderActiveNote('create');
+    });
+  }
 };
 
 // Delete the clicked note
