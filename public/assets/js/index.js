@@ -103,7 +103,6 @@ const editNoteMode = () => {
   noteHeader.textContent = 'Editing Note';
 };
 
-// Handle the various states with a switch statement
 const renderActiveNote = (mode) => {
   hide(saveNoteBtn);
   switch (mode) {
@@ -149,7 +148,6 @@ const handleNoteSave = () => {
   }
 };
 
-// Delete the clicked note
 const handleNoteDelete = (event) => {
   // If the event is triggered by the drag-and-drop the event will be an object with noteId
   const noteId = event.noteId || JSON.parse(event.target.parentElement.getAttribute('data-note')).id;
@@ -162,7 +160,6 @@ const handleNoteDelete = (event) => {
   });
 };
 
-// Sets the activeNote and displays it
 const handleNoteView = (e) => {
   e.preventDefault();
 
@@ -171,7 +168,6 @@ const handleNoteView = (e) => {
   renderActiveNote('view');
 };
 
-// Create a function that will handle the editing note view
 const handleEditNoteView = (e) => {
   // Prevents the listEl's click event from bubbling and voiding this invokation
   e.stopPropagation()
@@ -199,7 +195,7 @@ const handleRenderSaveBtn = () => {
 const renderNoteList = async (notes) => {
   // Get the JSON data from the response
   let jsonResponse = await notes.json();
-  
+
   // Access the array from the object
   let jsonNotes = jsonResponse || [];
 
