@@ -103,10 +103,9 @@ const editNoteMode = () => {
   noteHeader.textContent = 'Editing Note';
 };
 
+// Handle the various states with a switch statement
 const renderActiveNote = (mode) => {
   hide(saveNoteBtn);
-
-  // Handle the various states with a switch statement
   switch (mode) {
     case 'create':
       createNoteMode();
@@ -117,7 +116,7 @@ const renderActiveNote = (mode) => {
     case 'edit':
       editNoteMode();
       break;
-  }
+  };
 };
 
 // Helper function designed for collecting and returning active note info
