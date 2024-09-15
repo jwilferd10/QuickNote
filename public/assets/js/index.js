@@ -109,15 +109,12 @@ const renderActiveNote = (mode) => {
   // Handle the various states with a switch statement
   switch (mode) {
     case 'create':
-      console.log('Create Mode');
       createNoteMode();
       break;
     case 'view': 
-    console.log('View Mode');
       viewNoteMode();
       break;
     case 'edit':
-      console.log('Edit Mode');
       editNoteMode();
       break;
   }
