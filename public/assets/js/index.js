@@ -199,9 +199,7 @@ const handleRenderSaveBtn = () => {
 const renderNoteList = async (notes) => {
   // Get the JSON data from the response
   let jsonResponse = await notes.json();
-
-  console.log(jsonResponse);
-
+  
   // Access the array from the object
   let jsonNotes = jsonResponse || [];
 
@@ -292,14 +290,11 @@ if (window.location.pathname === '/notes') {
   deleteZone.addEventListener('dragover', (event) => event.preventDefault());
   deleteZone.addEventListener('dragenter', () => deleteZone.classList.add('hovered'));
   deleteZone.addEventListener('dragleave', () => deleteZone.classList.remove('hovered'));
-
   deleteZone.addEventListener('drop', (event) => {
     event.preventDefault();
 
     // Retrieve the note data using dataTransfer
     const noteData = event.dataTransfer.getData('text/plain');
-
-    // Parse the data into note
     const note = JSON.parse(noteData);
 
     // Pass note's note.id directly to handleNoteDelete for deletion
