@@ -237,14 +237,14 @@ const renderNoteList = async (notes) => {
     liEl.addEventListener('dragend', () => deleteZone.classList.remove('active'));
 
     const editBtnEl = document.createElement('i');
-    editBtnEl.classList.add('fas', 'fa-edit', 'float-right', 'edit-note');
+    editBtnEl.classList.add('fas', 'fa-edit', 'float-right', 'edit-note', 'pl-1');
     editBtnEl.addEventListener('click', handleEditNoteView);
     liEl.append(editBtnEl);
   
     // create and append a delete button if true
     if (delBtn) {
       const delBtnEl = document.createElement('i');
-      delBtnEl.classList.add('fas', 'fa-trash-alt', 'float-right', 'delete-note');
+      delBtnEl.classList.add('fas', 'fa-trash-alt', 'float-right', 'delete-note', 'pr-1');
       delBtnEl.addEventListener('click', handleNoteDelete);
 
       // append to the list item element
