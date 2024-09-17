@@ -16,6 +16,8 @@
 
   /* Slightly lighter blue for list items */
   --list-item-bg: #6795b2;
+
+  --edit-item: #3bca5d;
 }
 
 html, body {
@@ -173,10 +175,8 @@ form *,
 
   i {
     font-size: 1.3rem;
-    color: var(--primary-action);
-
+    
     &:hover {
-      font-size: 1.4rem;
       cursor: pointer;
     }
   }
@@ -186,11 +186,17 @@ form *,
 
     &:hover {
       color: #fd3c4c;
+      font-size: 1.4rem;
     }
   }
 
   .edit-note {
-    color: greenyellow;
+    color: var(--edit-item);
+
+    &:hover {
+      color: #4ded72;
+      font-size: 1.4rem;
+    }
   }
 
   .list-group-item {
