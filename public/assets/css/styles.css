@@ -251,6 +251,10 @@ form *,
     span {
       box-shadow: unset;
     }
+
+    .fa-trash-alt {
+      color: white;
+    }
   }
 }
 
