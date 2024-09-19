@@ -1,9 +1,9 @@
-# QuickNote
-This project is currently undergoing a facelift and will be updated frequently in the coming time. This is a work in progress!
+# QuickNote 💭
+***Take note of your next best idea***
 
 Live Deployment Link: COMING SOON
   
-## Screenshots of Deployed Application:
+## Preview:
 (Coming Soon!)
   
 ## Table of Contents 
