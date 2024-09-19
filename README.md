@@ -17,8 +17,6 @@ Live Deployment Link: COMING SOON
 ### ✍️ Welcome to QuickNote
 QuickNote is a sleek, user-friendly note-taking application inspired by classic notepads and designed to help users stay organized. Users can effortlessly create, edit, and delete notes, making it perfect for jotting down ideas or reminders.
 
-The app features a modern UI with intuitive drag-and-drop functionality, allowing users to manage their notes efficiently. Key features include:
-
 ### 🚀 Features
 #### Front-End
 - **Semantic HTML:** Built using semantic HTML, following best practices for accessibility and SEO.
@@ -34,6 +32,12 @@ The app features a modern UI with intuitive drag-and-drop functionality, allowin
 - **Express.js Server:** Built with `express.js` for robust server-side functionality.
 
 Simply put, QuickNote is a tool that's ideal for anyone looking to keep track of their thoughts in an organized way.
+
+### 🌐 Accessible and Open
+The repository encourages exploration and collaboration, with the codebase thoughtfully organized and easily modifiable. Feel free to delve into the code, contribute, and customize it to your needs.
+
+### 🙏 Thank You!
+Thanks for checking out QuickNote, this app has undergone an overhaul and changed drastically since it's creation in 2021. The goal of this project was to go above and beyond a generic note-taking application. Happy coding!
 
 ## :book: User Story:
 ### GIVEN a note-taking application
