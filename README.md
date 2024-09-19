@@ -46,7 +46,11 @@ Simply put, QuickNote is a tool that's ideal for anyone looking to keep track of
    - THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
 ## :floppy_disk: Resources Used:
-(COMING SOON)
+- express.js (^4.19.2)
+- jest (^29.7.0)
+- uuid (^10.0.0)
+- fontawesome (^5.3.1)
+- bootstrap (4.1.3)
 
 ## :minidisc: Usage:
   - The `Note Header` will change based on current actions
