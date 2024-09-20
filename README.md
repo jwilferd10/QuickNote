@@ -2,6 +2,7 @@
 ***Take note of your next best idea***
 
 Live Deployment Link: COMING SOON
+Repository Link: https://github.com/jwilferd10/QuickNote
   
 ## Preview:
 (Coming Soon!)
@@ -37,7 +38,7 @@ Simply put, QuickNote is a tool that's ideal for anyone looking to keep track of
 The repository encourages exploration and collaboration, with the codebase thoughtfully organized and easily modifiable. Feel free to delve into the code, contribute, and customize it to your needs.
 
 ### 🙏 Thank You!
-Thanks for checking out QuickNote, this app has undergone an overhaul and changed drastically since it's creation in 2021. The goal of this project was to go above and beyond a generic note-taking application. Happy coding!
+Thanks for checking out Quicknote, this app has undergone an overhaul and has drastically changed since it's creation in 2021. The main goal was to go above and beyond and create a unique note-taking application. Happy coding!
 
 ## :book: User Story:
 ### GIVEN a note-taking application
@@ -77,4 +78,4 @@ Thanks for checking out QuickNote, this app has undergone an overhaul and change
   
 ## :paperclip: Contributors
   - Github: [jwilferd10](https://github.com/jwilferd10)
-  - Email: jwilferd10@yahoo.com 
+    - Email: jwilferd10@yahoo.com 
