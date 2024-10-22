@@ -1,9 +1,10 @@
-# QuickNote
-This project is currently undergoing a facelift and will be updated frequently in the coming time. This is a work in progress!
+# QuickNote 💭
+***Take note of your next best idea***
 
 Live Deployment Link: COMING SOON
+Repository Link: https://github.com/jwilferd10/QuickNote
   
-## Screenshots of Deployed Application:
+## Preview:
 (Coming Soon!)
   
 ## Table of Contents 
@@ -14,16 +15,30 @@ Live Deployment Link: COMING SOON
   - [Contributors](#paperclip-contributors)
 
 ## :wave: Description: 
-QuickNote is a sleek, user-friendly note-taking application inspired by classic notepads, designed to help users stay organized. With QuickNote, users can effortlessly create, edit, and delete notes, making it perfect for jotting down ideas, reminders, or important information.
+### ✍️ Welcome to QuickNote
+QuickNote is a sleek, user-friendly note-taking application inspired by classic notepads and designed to help users stay organized. Users can effortlessly create, edit, and delete notes, making it perfect for jotting down ideas or reminders.
 
-The app features a modern UI with intuitive drag-and-drop functionality, allowing users to manage their notes efficiently. Key features include:
+### 🚀 Features
+#### Front-End
+- **Semantic HTML:** Built using semantic HTML, following best practices for accessibility and SEO.
+- **Efficient CSS:** UI styled with CSS, following modern and efficient design practices.
+- **Create Notes:** Quickly and easily create new notes with a clean, intuitive interface.
+- **Delete Notes:** Remove notes effortlessly with a single click.
+  - **Drag and Drop Deletion:** Optionally delete notes by dragging them into a designated "delete" zone for an interactive experience.
+- **Responsive Design:** Optimized for both desktop and mobile devices
 
-- Create Notes: Easily create new notes with a simple, clean interface.
-- Delete Notes: Swiftly remove unwanted notes with a smooth delete feature.
-- Drag-and-Drop: Notes can be dragged into a 'delete-section' and removed that way.
-- Responsive Design: Optimized for both desktop and mobile devices, ensuring a great user experience across all platforms.
+#### Back-End
+- **Unique ID Generation:** Uses `uuid` to generate unique note IDs for better data management.
+- **Automated Testing:** Tests are executed using `jest` to ensure reliable functionality.
+- **Express.js Server:** Built with `express.js` for robust server-side functionality.
 
 Simply put, QuickNote is a tool that's ideal for anyone looking to keep track of their thoughts in an organized way.
+
+### 🌐 Accessible and Open
+The repository encourages exploration and collaboration, with the codebase thoughtfully organized and easily modifiable. Feel free to delve into the code, contribute, and customize it to your needs.
+
+### 🙏 Thank You!
+Thanks for checking out Quicknote, this app has undergone an overhaul and has drastically changed since it's creation in 2021. The main goal was to go above and beyond and create a unique note-taking application. Happy coding!
 
 ## :book: User Story:
 ### GIVEN a note-taking application
@@ -46,7 +61,11 @@ Simply put, QuickNote is a tool that's ideal for anyone looking to keep track of
    - THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
 ## :floppy_disk: Resources Used:
-(COMING SOON)
+- express.js (^4.19.2)
+- jest (^29.7.0)
+- uuid (^10.0.0)
+- fontawesome (^5.3.1)
+- bootstrap (4.1.3)
 
 ## :minidisc: Usage:
   - The `Note Header` will change based on current actions
@@ -59,4 +78,4 @@ Simply put, QuickNote is a tool that's ideal for anyone looking to keep track of
   
 ## :paperclip: Contributors
   - Github: [jwilferd10](https://github.com/jwilferd10)
-  - Email: jwilferd10@yahoo.com 
+    - Email: jwilferd10@yahoo.com 
