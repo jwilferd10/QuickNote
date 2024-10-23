@@ -4,9 +4,13 @@
 Live Deployment Link: COMING SOON
 Repository Link: https://github.com/jwilferd10/QuickNote
   
-## Preview:
-(Coming Soon!)
-  
+## :camera: Preview:
+<p float="left">
+  <img src= "public/assets/img/QuickNoteLandingPage.jpg"/>
+  <img src= "public/assets/img/QuickNoteProject.jpg"/>
+  <img src= "public/assets/img/QuickNoteMobile.png"/>
+</p>
+
 ## Table of Contents 
   - [Description](#wave-description)
   - [User Story](#book-user-story)
